@@ -1,0 +1,191 @@
+{
+  "hackathon-1": {
+    "widths": [
+      480,
+      960,
+      1280
+    ],
+    "formats": [
+      "avif",
+      "webp",
+      "jpg"
+    ]
+  },
+  "hackathon-2": {
+    "widths": [
+      480,
+      960,
+      1280
+    ],
+    "formats": [
+      "avif",
+      "webp",
+      "jpg"
+    ]
+  },
+  "portrait": {
+    "widths": [
+      400
+    ],
+    "formats": [
+      "avif",
+      "webp",
+      "jpg"
+    ]
+  },
+  "project-aifixit-1": {
+    "widths": [
+      480,
+      806
+    ],
+    "formats": [
+      "avif",
+      "webp",
+      "jpg"
+    ]
+  },
+  "project-aifixit-2": {
+    "widths": [
+      480,
+      806
+    ],
+    "formats": [
+      "avif",
+      "webp",
+      "jpg"
+    ]
+  },
+  "project-aifixit-3": {
+    "widths": [
+      480,
+      806
+    ],
+    "formats": [
+      "avif",
+      "webp",
+      "jpg"
+    ]
+  },
+  "project-architech-1": {
+    "widths": [
+      480,
+      806
+    ],
+    "formats": [
+      "avif",
+      "webp",
+      "jpg"
+    ]
+  },
+  "project-architech-2": {
+    "widths": [
+      480,
+      806
+    ],
+    "formats": [
+      "avif",
+      "webp",
+      "jpg"
+    ]
+  },
+  "project-architech-3": {
+    "widths": [
+      480,
+      806
+    ],
+    "formats": [
+      "avif",
+      "webp",
+      "jpg"
+    ]
+  },
+  "project-architech-4": {
+    "widths": [
+      480,
+      960,
+      1600,
+      2400
+    ],
+    "formats": [
+      "avif",
+      "webp",
+      "jpg"
+    ]
+  },
+  "project-futurepop-1": {
+    "widths": [
+      480,
+      960,
+      1600
+    ],
+    "formats": [
+      "avif",
+      "webp",
+      "jpg"
+    ],
+    "illustration": true
+  },
+  "project-makeadash-1": {
+    "widths": [
+      480,
+      960,
+      1600
+    ],
+    "formats": [
+      "avif",
+      "webp",
+      "jpg"
+    ],
+    "illustration": true
+  },
+  "project-motionmentor-1": {
+    "widths": [
+      480,
+      960,
+      1600
+    ],
+    "formats": [
+      "avif",
+      "webp",
+      "jpg"
+    ],
+    "illustration": true
+  },
+  "project-plpredictor-1": {
+    "widths": [
+      480,
+      960,
+      1600
+    ],
+    "formats": [
+      "avif",
+      "webp",
+      "jpg"
+    ],
+    "illustration": true
+  },
+  "project-sudoku-1": {
+    "widths": [
+      480,
+      960,
+      1600
+    ],
+    "formats": [
+      "avif",
+      "webp",
+      "jpg"
+    ],
+    "illustration": true
+  },
+  "project-veinviz-1": {
+    "widths": [
+      480,
+      806
+    ],
+    "formats": [
+      "avif",
+      "webp",
+      "jpg"
+    ]
+  }
+}

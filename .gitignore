@@ -1,0 +1,17 @@
+node_modules
+dist
+*.local
+.DS_Store
+explainer/node_modules
+explainer/out
+
+# Private source material: the master resume has a phone number on it
+Krish_Iyer_Master_Resume.pdf
+explainer/install.log
+explainer/render.log
+
+# Vercel project link (created by the CLI)
+.vercel
+
+.vercel
+.env*

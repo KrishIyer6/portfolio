@@ -1,0 +1,57 @@
+WEBVTT
+
+1
+00:00:00.500 --> 00:00:04.600
+ArchiTech starts with something flat: an image of a floor plan.
+
+2
+00:00:05.000 --> 00:00:09.600
+Upload it and the app takes it from there.
+
+3
+00:00:10.500 --> 00:00:14.600
+An Express backend sends the image to the Claude API.
+
+4
+00:00:15.000 --> 00:00:20.100
+Claude returns walls, doors, windows, stairs, and furniture as structured JSON.
+
+5
+00:00:20.500 --> 00:00:23.600
+That output is validated before anything is drawn.
+
+6
+00:00:24.500 --> 00:00:29.600
+React Three Fiber builds the model, up to five floors high.
+
+7
+00:00:30.000 --> 00:00:36.600
+Each floor gets a slab and a stairwell opening, and the roof can be flat, gable, or hip.
+
+8
+00:00:37.500 --> 00:00:42.100
+A clipping plane cuts the model open so you can see inside.
+
+9
+00:00:42.500 --> 00:00:49.600
+Or walk through it in first person at an eye height of 1.65 meters, with wall collision and stairs between floors.
+
+10
+00:00:50.500 --> 00:00:55.600
+Mark where a fire is, and Dijkstra’s algorithm searches the floor grid.
+
+11
+00:00:56.000 --> 00:01:02.600
+It routes around the fire to an outside door, or to a window if the stairs are cut off.
+
+12
+00:01:03.500 --> 00:01:08.100
+Then comes a bill of materials, with quantities per floor and estimated costs.
+
+13
+00:01:08.500 --> 00:01:11.600
+It exports as CSV, DXF, or JSON.
+
+14
+00:01:12.000 --> 00:01:15.600
+186 automated tests cover the geometry, the routing, and the file import.

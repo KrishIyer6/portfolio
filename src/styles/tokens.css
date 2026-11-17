@@ -1,0 +1,44 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-paper: #fbfcf8;
+  --color-panel: #ffffff;
+  --color-wash: #eef0e8;
+  --color-edge: #c3cad6;
+  --color-ink: #0f172a;
+  --color-dim: #334155;
+  --color-faint: #586579;
+  --color-accent: #2447f9;
+  --color-accent-deep: #1a34c2;
+  --color-draw: #1e293b;
+  --color-redline: #d92d20;
+  --color-line: rgb(15 23 42 / 0.14);
+  --color-line-strong: rgb(15 23 42 / 0.34);
+
+  --font-display: 'Big Shoulders Display Variable', 'Arial Narrow', sans-serif;
+  --font-sans: 'Instrument Sans Variable', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, 'SFMono-Regular', monospace;
+
+  --text-note: 0.75rem;
+  --text-small: 0.875rem;
+  --text-body: clamp(1rem, 0.96rem + 0.2vw, 1.125rem);
+  --text-lead: clamp(1.2rem, 1.05rem + 0.7vw, 1.6rem);
+  --text-h3: clamp(1.75rem, 1.3rem + 2vw, 3rem);
+  --text-h2: clamp(3rem, 1.6rem + 6.4vw, 7.5rem);
+  --text-hero: clamp(3.25rem, 19.4vw, 19rem);
+
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+  --ease-build: cubic-bezier(0.16, 1, 0.3, 1);
+
+  --breakpoint-xs: 26rem;
+}
+
+:root {
+  --gutter: clamp(1.25rem, 4vw, 4rem);
+  --section-y: clamp(6rem, 15vh, 11rem);
+  --nav-h: 3.5rem;
+  --dur-press: 140ms;
+  --dur-ui: 220ms;
+  --dur-reveal: 900ms;
+}

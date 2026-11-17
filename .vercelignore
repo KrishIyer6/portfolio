@@ -1,0 +1,13 @@
+# Vercel builds the site from source with `npm run build`. Keep everything it does not need off the upload.
+node_modules
+dist
+.git
+.claude
+explainer
+image-source
+scripts
+headshot.jpg
+Krish_Iyer_Master_Resume.pdf
+portfolio_prompt_with_hobbies_with_images.md
+design-review.html
+*.md

@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Design review: Krish Iyer portfolio</title>
+<style>
+  :root { --ink:#041429; --panel:#091e39; --line:rgba(122,180,220,.28); --chalk:#e9f2f7; --dim:#aac1d2; --faint:#7e9db5; --warm:#fcba43; --cyan:#7adff7; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--ink); color:var(--chalk); font:16px/1.6 system-ui, sans-serif; }
+  main { max-width: 68rem; margin: 0 auto; padding: 3rem 1.25rem 5rem; }
+  h1 { font-size: clamp(2rem, 5vw, 3.25rem); line-height:1.05; margin:0 0 .5rem; text-wrap: balance; }
+  h2 { font-size:1.35rem; margin: 3rem 0 1rem; }
+  h3 { margin:0; font-size:1.05rem; }
+  p { margin:.5rem 0 0; color:var(--dim); }
+  .meta { color:var(--faint); font: 12px/1.5 ui-monospace, monospace; letter-spacing:.05em; text-transform:uppercase; }
+  .top { display:grid; gap:2rem; grid-template-columns: 1fr; align-items:center; }
+  @media (min-width: 800px) { .top { grid-template-columns: 1.1fr 1fr; } .cards { grid-template-columns: 1fr 1fr; } .lists { grid-template-columns: repeat(3, 1fr); } }
+  .cards, .lists { display:grid; gap:1rem; }
+  .card { border:1px solid var(--line); background:var(--panel); padding:1.25rem; }
+  .score { display:flex; align-items:baseline; gap:.6rem; margin-top:.25rem; }
+  .score b { font-size:2.25rem; line-height:1; color:var(--warm); font-variant-numeric: tabular-nums; }
+  .score span { color:var(--faint); font-size:.85rem; }
+  ul { margin:.75rem 0 0; padding-left:1.1rem; color:var(--dim); }
+  li { margin:.4rem 0; }
+  li strong { color:var(--chalk); font-weight:600; }
+  table { width:100%; border-collapse:collapse; margin-top:1rem; font-variant-numeric: tabular-nums; }
+  th, td { text-align:left; padding:.55rem .5rem; border-bottom:1px solid var(--line); }
+  th { color:var(--faint); font-weight:500; font-size:.85rem; }
+  svg text { fill: var(--dim); font: 11px ui-monospace, monospace; }
+</style>
+</head>
+<body>
+<main>
+  <p class="meta">Design review, 5 dimensions. Reviewed 16 Nov 2026 against the running build at 1280 x 800 and 375 x 812.</p>
+  <div class="top">
+    <div>
+      <h1>Krish Iyer portfolio: from blueprint to build</h1>
+      <p>Verdict: the concept holds from the first frame to the footer and the flagship moment is real, not decorative. The weak spots were in execution details and two functional bugs, both found by looking at the render and both fixed. What is left is mostly content the owner has to supply.</p>
+    </div>
+    <svg viewBox="-150 -140 300 280" role="img" aria-label="Radar chart of five scores, before and after the polish pass">
+      <g fill="none" stroke="rgba(122,180,220,.28)">
+        <polygon points="0,-100 95.1,-30.9 58.8,80.9 -58.8,80.9 -95.1,-30.9"/>
+        <polygon points="0,-75 71.3,-23.2 44.1,60.7 -44.1,60.7 -71.3,-23.2"/>
+        <polygon points="0,-50 47.6,-15.5 29.4,40.5 -29.4,40.5 -47.6,-15.5"/>
+        <path d="M0 0V-100M0 0 95.1 -30.9M0 0 58.8 80.9M0 0-58.8 80.9M0 0-95.1-30.9"/>
+      </g>
+      <polygon points="0,-80 66.6,-21.6 35.3,48.5 -35.3,48.5 -76.1,-24.7" fill="rgba(122,223,247,.12)" stroke="#7adff7" stroke-dasharray="3 3"/>
+      <polygon points="0,-80 66.6,-21.6 41.2,56.6 -47,64.7 -76.1,-24.7" fill="rgba(252,186,67,.22)" stroke="#fcba43" stroke-width="1.5"/>
+      <text x="0" y="-112" text-anchor="middle">Philosophy 8</text>
+      <text x="102" y="-34">Hierarchy 7</text>
+      <text x="64" y="100">Detail 7</text>
+      <text x="-64" y="100" text-anchor="end">Function 8</text>
+      <text x="-102" y="-34" text-anchor="end">Innovation 8</text>
+      <text x="-140" y="130" style="fill:#7adff7">Dashed: before</text>
+      <text x="140" y="130" text-anchor="end" style="fill:#fcba43">Solid: after</text>
+    </svg>
+  </div>
+
+  <div class="card" style="margin-top:2rem; border-color:#fcba43">
+    <h3>Update, after this review</h3>
+    <p>The scores below describe the first build, whose hero was a wireframe building taken from ArchiTech on a dark blue theme. The site has changed twice since and has not been re-scored. Latest state: a light paper-and-ink theme with a cobalt accent, a hover-driven CSS 3D stack in the hero with no pinned scrolling, and project mockups drawn in each project's own look.</p>
+    <ul>
+      <li><strong>Hero and scroll story rebuilt around the developer.</strong> The building is replaced by a four-sheet stack (data, model, services, interface) with four story steps tied to four different roles and projects. This answers the main criticism that the site read as one project's landing page. Checked at 1280 x 800; phone width was checked after the change, reduced motion was not.</li>
+      <li><strong>Real images added.</strong> ArchiTech, Ai-FixIT and VeinViz now show screenshots, and the hackathon gallery has photos. Make-A-Dash, Motion Mentor and FuturePop show generated illustrations, tagged as such.</li>
+      <li><strong>Globe pins are real.</strong> 29 places replace the five examples.</li>
+      <li><strong>ArchiTech demo embedded</strong> from YouTube, beside the silent explainer.</li>
+      <li><strong>New weak spot:</strong> the supplied screenshots are 806 px wide and look soft in the lightbox.</li>
+    </ul>
+  </div>
+
+  <table>
+    <thead><tr><th>Dimension</th><th>Before</th><th>After</th><th>What moved it</th></tr></thead>
+    <tbody>
+      <tr><td>Philosophy consistency</td><td>8</td><td>8</td><td>No change needed</td></tr>
+      <tr><td>Visual hierarchy</td><td>7</td><td>7</td><td>Award lines moved under titles; the two stacked giant headings remain</td></tr>
+      <tr><td>Detail execution</td><td>6</td><td>7</td><td>Chart labels, cyanotype overlay, title block overlap, hero note</td></tr>
+      <tr><td>Functionality</td><td>6</td><td>8</td><td>A thrown animation error and a mobile overflow, both fixed; focus trap added</td></tr>
+      <tr><td>Innovation</td><td>8</td><td>8</td><td>Added the light pulse when the windows come on</td></tr>
+    </tbody>
+  </table>
+
+  <h2>The five dimensions</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>1. Philosophy consistency</h3>
+      <div class="score"><b>8</b><span>/ 10, strong</span></div>
+      <p>One idea runs through everything: Prussian-blue ground, cyan line work, tungsten for anything lit. The hero grid, the <code>.sheet</code> corner ticks, the title block in the nav, the line-drawing project covers, and the cyanotype portrait all argue the same thesis. Drift: the Off the clock panels read as a card grid first and a drawing set second, and the white polaroids are the one object that ignores the palette.</p>
+    </div>
+    <div class="card">
+      <h3>2. Visual hierarchy</h3>
+      <div class="score"><b>7</b><span>/ 10, strong</span></div>
+      <p>Each section has a clear first read. Two places compete. PROJECTS (h2, up to 7.5rem) is followed within one screen by ARCHITECH at up to 15rem, so the section title is immediately outranked. In Experience the tungsten metrics at 5.75rem are louder than the role titles above them. That is intended for a 60-second scan, but it means the eye lands on 71.9% before it knows what the role is.</p>
+    </div>
+    <div class="card">
+      <h3>3. Detail execution</h3>
+      <div class="score"><b>7</b><span>/ 10, strong (was 6)</span></div>
+      <p>Fixed in this pass: chart value labels sat on top of the next row's label (row height 62 to 76); the cyanotype tint was a 9px square because <code>.sheet::after</code> and <code>.cyanotype::after</code> collided; the fixed title block covered card text at the bottom right; the hero's role note ran through the wireframe. Remaining: the 400px headshot is soft at 350 CSS px on a 2x screen, the climbing holds are small at phone width, and the globe pins say "Example".</p>
+    </div>
+    <div class="card">
+      <h3>4. Functionality</h3>
+      <div class="score"><b>8</b><span>/ 10, strong (was 6)</span></div>
+      <p>Two real bugs were caught in the browser. The shuttle animation passed path data where MotionPath expects an element, threw on every tick, and stalled every later scroll animation. A screen-reader-only table ignored its 1px box and made phones lay the page out at 581px. Both are fixed. Nav, keyboard access, project panel focus trap, lightbox keys, no-WebGL fallback and reduced-motion branches are in place. Not verified: the reduced-motion path on screen, a physical phone, and a Lighthouse run.</p>
+    </div>
+    <div class="card">
+      <h3>5. Innovation</h3>
+      <div class="score"><b>8</b><span>/ 10, strong</span></div>
+      <p>The viewer is the memorable move: a live procedural building whose roof morphs between flat, gable and hip, with a section cut and a fire route computed by an actual Dijkstra search that falls back to a window when the door is blocked. It demonstrates the project instead of describing it. Supporting moves that earn their place: the name filling from the ground up, line-drawing covers generated from the same geometry as the 3D model, and the ordered-dither preloader exit.</p>
+    </div>
+  </div>
+
+  <h2>Actions</h2>
+  <div class="lists">
+    <div class="card">
+      <h3>Keep</h3>
+      <ul>
+        <li><strong>The two-accent rule.</strong> Cyan is drawn, tungsten is lit. Do not add a third.</li>
+        <li><strong>The viewer controls</strong> and its plain-language status line.</li>
+        <li><strong>Line drawings as covers.</strong> They are honest about missing screenshots.</li>
+        <li><strong>One pinned scene.</strong> Do not pin anything else.</li>
+        <li><strong>All copy in <code>content.ts</code>.</strong></li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Fix</h3>
+      <ul>
+        <li><strong>Supply real screenshots</strong> for Make-A-Dash, Motion Mentor and FuturePop, which still use illustrations. (Done since the review for ArchiTech, Ai-FixIT and VeinViz.)</li>
+        <li><strong>Re-export the screenshots larger.</strong> 806 px wide is soft at full size.</li>
+        <li><strong>Use a larger headshot</strong> (1600 x 2000).</li>
+        <li><strong>Swap the resume PDF</strong> for one without a phone number, if that rule still stands.</li>
+        <li><strong>Run Lighthouse</strong> on the deployed build and test on a real phone.</li>
+        <li><strong>Check reduced motion</strong> on a device with the setting on.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Quick wins</h3>
+      <ul>
+        <li>Add <code>og-image.png</code> from a hero screenshot.</li>
+        <li>Name the hackathons in the gallery captions.</li>
+        <li>Add a favorite dish to a few globe places.</li>
+        <li>Fill in repo links; the buttons appear on their own.</li>
+        <li>Add dates for Ai-FixIT and VeinViz.</li>
+      </ul>
+    </div>
+  </div>
+</main>
+</body>
+</html>
